@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: ok-app
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  backend:
+    serviceName: ok-app
+    servicePort: 80
+  rules:
+  - host: arch.homework
+    http:
+      paths:
+        - path: /
+          backend:
+            serviceName: ok-app
+            servicePort: 80
