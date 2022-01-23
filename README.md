@@ -10,6 +10,6 @@
 
 Получим ответ от сервиса `'{"status": "ok"}'`
 
-Таже сделал доп. задание, поэтому запрос `curl -i http://arch.homework/otusapp/mikhai/health/`
+Таже сделал доп. задание, поэтому запрос `curl -i http://arch.homework/otusapp/mikhail/health/`
 
 Также вернёт `'{"status": "ok"}'`
