@@ -1,4 +1,4 @@
-apiVersion: networking.k8s.io/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ok-app
@@ -14,6 +14,9 @@ spec:
     http:
       paths:
         - path: /
+          pathType: ImplementationSpecific
           backend:
-            serviceName: ok-app
-            servicePort: 80
+            service:
+              name: "ok-app"
+              port:
+                number: 80
